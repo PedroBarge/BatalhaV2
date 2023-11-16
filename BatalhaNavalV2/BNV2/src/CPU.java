@@ -24,6 +24,5 @@ public class CPU extends Player {
             }
             makeBoard.buildBoardPlayer1();
         }
-
     }
 }

@@ -6,16 +6,17 @@ public class Player {
     public Player(String name) {
         Name = name;
     }
-
     public Player(String name, boolean isCPU) {
         Name = name;
         this.isCPU = isCPU;
     }
-
     public void checkPlayer() {
         if (isCPU) {
             CPU cpu = new CPU("CPU",true);
-            cpu.
+            cpu.checkPlayer();
+        }else {
+            PlaceBoats placeBoats = new PlaceBoats();
+            placeBoats.placeBoatsPlayer2();
         }
     }
 }
