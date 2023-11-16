@@ -1,19 +1,43 @@
 public class MakeBoard {
-    String[][] board = new String[5][5];
+    String[][] boardPlayer1 = new String[5][5];
+    String[][] boardPlayer2 = new String[5][5];
 
-    public void makeNewBoard() {
-        for (int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board.length; j++) {
-                board[i][j] = " ~ ";
+    //----------------------
+    public void makeNewBoardPlayer1() {
+        for (int i = 0; i < boardPlayer1.length; i++) {
+            for (int j = 0; j < boardPlayer1.length; j++) {
+                boardPlayer1[i][j] = " ~ ";
             }
         }
     }
-    public void buildBoard() {
+
+    public void buildBoardPlayer1() {
         System.out.println(" 0  1  2  3  4 ");
         System.out.println("---------------");
-        for (int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board.length; j++) {
-                System.out.print(board[i][j]);
+        for (int i = 0; i < boardPlayer1.length; i++) {
+            for (int j = 0; j < boardPlayer1.length; j++) {
+                System.out.print(boardPlayer1[i][j]);
+            }
+            System.out.println(" |" + i);
+            System.out.println();
+        }
+    }
+
+    //----------------------
+    public void makeNewBoardPlayer2() {
+        for (int i = 0; i < boardPlayer2.length; i++) {
+            for (int j = 0; j < boardPlayer2.length; j++) {
+                boardPlayer2[i][j] = " ~ ";
+            }
+        }
+    }
+
+    public void buildBoardPlayer2() {
+        System.out.println(" 0  1  2  3  4 ");
+        System.out.println("---------------");
+        for (int i = 0; i < boardPlayer2.length; i++) {
+            for (int j = 0; j < boardPlayer2.length; j++) {
+                System.out.print(boardPlayer2[i][j]);
             }
             System.out.println(" |" + i);
             System.out.println();
